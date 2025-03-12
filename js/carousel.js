@@ -1,8 +1,8 @@
 function changeImage(index) {
   const images = [
-    "images/bottle.png",
-    "images/pirate-bottle.png",
-    "images/boat-bottle.jpg",
+    "images/blue-banner.jpg",
+    "images/red-banner.jpg",
+    "images/green-banner.avif",
   ];
   document.getElementById("banner").src = images[index];
 }
