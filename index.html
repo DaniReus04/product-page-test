@@ -16,5 +16,32 @@
         <h1>Daniel's company</h1>
       </nav>
     </header>
+
+    <section id="hero" class="hero">
+      <div class="carousel-container">
+        <img
+          id="banner"
+          src="images/bottle.png"
+          alt="Banner"
+          class="banner-img"
+        />
+        <div class="thumbnails">
+          <img src="images/bottle.png" class="thumb" onclick="changeImage(0)" />
+          <img
+            src="images/pirate-bottle.png"
+            class="thumb"
+            onclick="changeImage(1)"
+          />
+          <img
+            src="images/boat-bottle.jpg"
+            class="thumb"
+            onclick="changeImage(2)"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
