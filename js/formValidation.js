@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const phoneInput = document.getElementById("phone");
   const leadForm = document.getElementById("lead-form");
   const productPage = document.getElementById("product-page");
+  const headerName = document.querySelector(".header-name");
+  const welcomeMessage = document.getElementById("welcome-message");
+
+  let userName = "";
 
   nameInput.addEventListener("input", function () {
     nameInput.value = nameInput.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
@@ -47,8 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
     productPage.style.justifyContent = "center";
     productPage.style.alignItems = "center";
 
-    window.alert(`Olá ${name}, seja bem-vindo!`);
+    userName = name; // Save user name
+    headerName.textContent = `${userName}'s store`; // Change header name
+    welcomeMessage.textContent = `Olá ${userName}, seja bem-vindo!`;
 
+    document.body.classList.add("show-header");
     document.body.style.overflow = "auto";
   });
 });

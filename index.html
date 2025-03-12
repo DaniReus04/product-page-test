@@ -12,9 +12,9 @@
   </head>
   <body>
     <section id="lead-form" class="lead-form">
-      <div class="container">
-        <h2>Cadastre-se</h2>
-        <form id="form">
+      <div class="lead-form-container">
+        <h2 class="text-white">Cadastre-se</h2>
+        <form id="form" class="lead-form-inputs">
           <input type="text" id="name" placeholder="Nome" required />
           <input type="email" id="email" placeholder="E-mail" required />
           <input
@@ -28,21 +28,40 @@
       </div>
     </section>
 
-    <div id="content">
-      <header id="sticky-header" class="sticky-header">
-        <nav
-          class="container d-flex justify-content-between align-items-center"
-        >
-          <h1>Daniel's company</h1>
+    <div id="content" class="content">
+      <header>
+        <div class="header-name">Meu Site</div>
+        <nav>
+          <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
         </nav>
       </header>
+
       <section id="product-page" class="product-page hidden">
         <div class="container">
           <h2 id="welcome-message"></h2>
           <p>Aqui estão os detalhes do nosso produto incrível!</p>
         </div>
       </section>
+
       <section id="hero" class="hero">
+        <div class="hero-description">
+          <h2 class="hero-title">Daniel's company</h2>
+          <p class="hero-paragraph">
+            Thinking about ways to redefine the future? So are we. We believe
+            that innovation is the key to unlocking new possibilities and
+            shaping a better tomorrow. Our products are designed with
+            cutting-edge technology and forward-thinking concepts, crafted to
+            meet the challenges of tomorrow, today. Whether it's enhancing
+            efficiency, sustainability, or creativity, we're here to provide
+            solutions that not only solve problems but also pave the way for a
+            smarter, more connected world. Explore the future with us and
+            discover what’s next.
+          </p>
+        </div>
         <div class="carousel-container">
           <img
             id="banner"
@@ -69,15 +88,33 @@
           </div>
         </div>
       </section>
+
       <section id="about" class="about">
-        <div class="container text-center">
-          <h2>Sobre Nós</h2>
-          <p>Conheça nossos produtos e serviços.</p>
-          <img src="images/about.jpg" class="img-fluid" />
+        <div class="about-img-wrapper">
+          <img src="images/rocket.jpg" class="about-img" />
+        </div>
+        <div class="about-description">
+          <h2 class="about-title">About us</h2>
+          <p class="about-text">
+            At Daniel's company, we are driven by a passion for innovation and
+            excellence. Our mission is to deliver high-quality, forward-thinking
+            solutions that not only meet but exceed the expectations of our
+            customers. Founded with the vision of creating products that combine
+            practicality with cutting-edge technology, we strive to make a
+            lasting impact on the world. We believe in a future where creativity
+            and sustainability go hand-in-hand, and we are committed to
+            providing products that improve everyday life while fostering a
+            better, more sustainable planet. With a dedicated team of experts,
+            we are always exploring new ways to push the boundaries of what’s
+            possible. Join us on our journey to shape the future with smarter,
+            more sustainable solutions, and experience the difference that
+            innovation can make.
+          </p>
         </div>
       </section>
+
       <section id="gallery" class="gallery">
-        <div class="container text-center">
+        <div class="gallery-container">
           <h2>Galeria de Produtos</h2>
           <div class="gallery-grid">
             <img
@@ -86,26 +123,84 @@
               onclick="openModal(0)"
             />
             <img
-              src="images/pirate-bottle.png"
-              class="gallery-item"
-              onclick="openModal(1)"
-            />
-            <img
               src="images/boat-bottle.jpg"
               class="gallery-item"
               onclick="openModal(2)"
             />
+            <img
+              src="images/pirate-bottle.png"
+              class="gallery-item"
+              onclick="openModal(1)"
+            />
           </div>
         </div>
       </section>
+
       <section id="testimonials" class="testimonials">
         <div class="container text-center">
           <h2>O que dizem nossos clientes</h2>
           <div class="testimonial-container">
             <div class="testimonial-slider">
-              <div class="testimonial">"Ótimo serviço!"</div>
-              <div class="testimonial">"Muito confiável!"</div>
-              <div class="testimonial">"Recomendo!"</div>
+              <div class="testimonial">
+                <p><b>João Marques</b></p>
+                <p>
+                  "Desde que comecei a usar os produtos dessa empresa, minha
+                  experiência mudou completamente. A qualidade e inovação são
+                  realmente impressionantes! Além disso, o atendimento ao
+                  cliente é excelente, sempre disposto a ajudar e esclarecer
+                  dúvidas. Recomendo para qualquer pessoa que busca soluções
+                  modernas e eficientes. Estou muito satisfeito com minha compra
+                  e já indiquei para vários amigos!"
+                </p>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+              </div>
+              <div class="testimonial">
+                <p><b>Ana Beatriz</b></p>
+                <p>
+                  "O que mais me impressionou foi a atenção aos detalhes. O
+                  design dos produtos é incrível, e a usabilidade é muito
+                  intuitiva. Tive uma dúvida sobre a configuração e fui
+                  prontamente atendida pelo suporte, que resolveu tudo
+                  rapidamente. É raro encontrar empresas que se preocupam tanto
+                  com a experiência do cliente. Sem dúvidas, uma das melhores
+                  aquisições que fiz nos últimos tempos!"
+                </p>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+              </div>
+              <div class="testimonial">
+                <p><b>Ricardo Oliveira</b></p>
+                <p>
+                  "Sou muito exigente com tecnologia, e confesso que fiquei
+                  surpreso com a qualidade desse produto. Ele superou todas as
+                  minhas expectativas, desde a durabilidade até a eficiência no
+                  dia a dia. Além disso, a entrega foi rápida e chegou bem
+                  embalado. Se você procura inovação e desempenho, esse é o
+                  produto certo!"
+                </p>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+              </div>
+              <div class="testimonial">
+                <p><b>Marina Costa</b></p>
+                <p>
+                  "O que me fez escolher essa empresa foi a preocupação com
+                  sustentabilidade e inovação. O produto que comprei é não só
+                  funcional, mas também feito com materiais ecologicamente
+                  corretos. Fiquei encantada com a proposta e a experiência de
+                  uso. Vale cada centavo!"
+                </p>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+              </div>
+              <div class="testimonial">
+                <p><b>Thiago Mendes</b></p>
+                <p>
+                  "Uma das melhores compras que já fiz! A tecnologia aplicada
+                  nesse produto realmente faz a diferença. A praticidade, o
+                  design sofisticado e o excelente suporte ao cliente me
+                  conquistaram. Sempre fico de olho nos lançamentos da marca,
+                  pois sei que a qualidade é garantida!"
+                </p>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+              </div>
             </div>
           </div>
           <div class="testimonial-buttons">
@@ -116,18 +211,19 @@
         </div>
       </section>
       <section id="countdown" class="countdown">
-        <div class="container text-center">
+        <div class="countdown-container">
           <h2>Promoção Especial</h2>
-          <div id="timer">00:05:00</div>
-          <button class="btn btn-primary">Aproveitar Oferta</button>
+          <div id="timer" class="countdown-timer">00:05:00</div>
+          <button class="countdown-button">Aproveitar Oferta</button>
         </div>
       </section>
-      <footer class="footer">
-        <div class="container text-center">
-          <p>© 2025 Daniel's company</p>
-        </div>
-      </footer>
     </div>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <p>© 2025 Daniel's company</p>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
     <script src="js/gallery.js"></script>

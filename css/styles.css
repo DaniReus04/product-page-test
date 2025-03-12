@@ -1,40 +1,42 @@
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100vh;
-    background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  background-color: white;
 }
 
 #lead-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(10, 9, 43);
 }
 
-#product-page {
-    display: none;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    background-color: white;
-    padding: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
+.lead-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.lead-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
-.lead-form, .product-page {
-    text-align: center;
-    padding: 50px 20px;
+.lead-form,
+.product-page {
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .product-page {
@@ -42,133 +44,424 @@ body {
 }
 
 input {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
 }
 
-input[type="text"], input[type="email"] {
-    text-transform: capitalize;
+input[type="text"] {
+  text-transform: capitalize;
+}
+
+input::placeholder {
+  text-align: center;
 }
 
 button {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+  background: #b31726;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 2%;
+  width: 20%;
+  align-self: center;
 }
 
 button:hover {
-    background: #0056b3;
+  background: #d7606b;
+  color: black;
 }
 
-.sticky-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    background: rgb(132, 136, 132);
-    box-shadow: 0px 4px 2px -2px rgb(54, 69, 79);
-    transition: all 0.3s ease;
+header {
+  display: none;
+}
+
+.content {
+  padding: 5% 20%;
+}
+
+.show-header header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgb(10, 9, 43);
+  box-shadow: 0px 4px 2px -2px rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.header-name {
+  color: white;
+  font-size: 32px;
+}
+
+header ul {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  list-style-type: none;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  color: white;
+}
+
+header.header-small {
+  height: 60px;
+  padding: 10px;
+  background-color: rgb(10, 9, 43);
 }
 
 .hero {
-    text-align: center;
-    padding: 50px 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 64px;
+}
+
+.hero-description {
+  width: 50%;
+}
+
+.hero-title {
+  text-align: left;
+  font-size: 24px;
+  color: black;
+}
+
+.hero-paragraph {
+  font-size: 18px;
+  color: black;
+  text-align: left;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
 .banner-img {
-    width: 35%;
-    max-height: 300px;
+  width: 400px;
+  height: 280px;
+  border-radius: 40px;
 }
 
 .thumbnails img {
-    width: 80px;
-    height: 50px;
-    cursor: pointer;
-    margin: 5px;
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.about-img-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.about-img {
+  width: 55%;
+  height: 280px;
+  border-radius: 20px;
+}
+
+.about-description {
+  width: 50%;
+}
+
+.about-title {
+  font-size: 24px;
+  color: black;
+  text-align: left;
+}
+
+.about-text {
+  text-align: left;
+  font-size: 18px;
+}
+
+.gallery-container {
+  margin-top: 5%;
+  text-align: center;
 }
 
 .gallery-grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 5%;
 }
 
 .gallery-item {
-    width: 100px;
-    cursor: pointer;
+  width: 33%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.testimonials {
+  margin-top: 5%;
 }
 
 .testimonial-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .testimonial-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .testimonial {
-    flex: 0 0 100%;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 10px;
-    margin: 10px;
-    padding-right: 68.5%;
+  flex: 0 0 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  margin-right: 5px;
+  border-radius: 10px;
 }
 
 .testimonial-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .testimonial-buttons button {
-    margin: 0 10px;
-    padding: 5px 15px;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
+  margin: 0 10px;
+  padding: 5px 15px;
+  border: none;
+  background: rgb(10, 9, 43);
+  color: white;
+  cursor: pointer;
 }
 
 .testimonial-buttons button:hover {
-    background: #0056b3;
+  background: rgb(22, 3, 132);
 }
 
 .testimonial-dots {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: gray;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .dot.active {
-    background-color: #007bff;
+  background-color: rgb(10, 9, 43);
+}
+
+.countdown {
+  margin-top: 5%;
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.countdown-timer {
+  font-size: 32px;
+  background-color: rgb(10, 9, 43);
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.countdown button {
+  margin: 0 10px;
+  padding: 5px 15px;
+  border: none;
+  background: rgb(10, 9, 43);
+  color: white;
+  cursor: pointer;
+}
+
+.countdown button:hover {
+  background: rgb(22, 3, 132);
 }
 
 .footer {
-    background-color: rgb(54, 69, 79);
-    color: white;
+  background-color: rgb(54, 69, 79);
+  color: white;
+  text-align: center;
+  padding: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .lead-form-container {
+    width: 80%;
+  }
+
+  .hero {
+    flex-direction: column;
     text-align: center;
-    padding: 32px;
+  }
+
+  .hero-description,
+  .carousel-container {
+    width: 100%;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 80%;
+  }
+
+  .gallery-grid {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 5% 8px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 10px 15px;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0;
+    margin-top: 18px;
+  }
+
+  .header-name {
+    font-size: 22px;
+  }
+
+  .banner-img,
+  .about-img,
+  .gallery-item {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    padding-top: 40px;
+  }
+
+  .hero-description,
+  .carousel-container {
+    width: 100%;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .about-description {
+    width: 100%;
+  }
+
+  .about-img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-img {
+    width: 80%;
+    max-width: 400px;
+    margin-top: 5%;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .testimonial {
+    width: 100%;
+    max-width: 90%;
+    padding: 15px;
+    margin: 0 1%;
+  }
+
+  .testimonial-slider {
+    width: 100%;
+    display: flex;
+  }
+}
+
+button {
+  width: auto;
+  min-width: 120px;
+  padding: 10px 20px;
+  text-align: center;
+  white-space: nowrap;
 }

@@ -19,7 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const dots = document.querySelectorAll(".dot");
 
   function updateSlider() {
-    slider.style.transform = `translateX(-${index * 100}%)`;
+    const isMobile = window.innerWidth <= 768;
+    // Condição para ajustar o comportamento entre Desktop e Mobile
+    if (isMobile) {
+      slider.style.transform = `translateX(-${index * 90}%)`;
+    } else {
+      // Para desktop, pode continuar com o comportamento anterior
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
     dots.forEach((dot) => dot.classList.remove("active"));
     dots[index].classList.add("active");
   }
@@ -79,4 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isDown) return;
     moveX = e.touches[0].clientX - startX;
   });
+
+  // Atualiza a posição inicial do slider dependendo da largura da tela
+  updateSlider();
 });
