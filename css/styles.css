@@ -103,3 +103,10 @@ body {
 .dot.active {
     background-color: #007bff;
 }
+
+.footer {
+    background-color: rgb(54, 69, 79);
+    color: white;
+    text-align: center;
+    padding: 32px;
+}
