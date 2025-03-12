@@ -1,5 +1,54 @@
-document.getElementById("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  alert(`Olá ${name}, bem-vindo!`);
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const leadForm = document.getElementById("lead-form");
+  const productPage = document.getElementById("product-page");
+
+  nameInput.addEventListener("input", function () {
+    nameInput.value = nameInput.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
+  });
+
+  phoneInput.addEventListener("input", function () {
+    let phone = phoneInput.value.replace(/\D/g, ""); // Remove não numéricos
+    if (phone.length > 11) phone = phone.slice(0, 11); // Limita a 11 dígitos
+    phoneInput.value = phone.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+  });
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const phone = phoneInput.value.trim();
+
+    if (name === "" || email === "" || phone === "") {
+      alert("Preencha todos os campos!");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      alert("Digite um e-mail válido!");
+      return;
+    }
+
+    if (phone.length < 15) {
+      alert("Digite um telefone válido no formato (99) 99999-9999");
+      return;
+    }
+
+    leadForm.style.display = "none";
+    productPage.style.display = "flex";
+    productPage.style.justifyContent = "center";
+    productPage.style.alignItems = "center";
+
+    window.alert(`Olá ${name}, seja bem-vindo!`);
+
+    document.body.style.overflow = "auto";
+  });
 });

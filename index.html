@@ -11,97 +11,6 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header id="sticky-header" class="sticky-header">
-      <nav class="container d-flex justify-content-between align-items-center">
-        <h1>Daniel's company</h1>
-      </nav>
-    </header>
-
-    <section id="hero" class="hero">
-      <div class="carousel-container">
-        <img
-          id="banner"
-          src="images/blue-banner.jpg"
-          alt="Banner"
-          class="banner-img"
-        />
-        <div class="thumbnails">
-          <img
-            src="images/blue-banner.jpg"
-            class="thumb"
-            onclick="changeImage(0)"
-          />
-          <img
-            src="images/red-banner.jpg"
-            class="thumb"
-            onclick="changeImage(1)"
-          />
-          <img
-            src="images/green-banner.avif"
-            class="thumb"
-            onclick="changeImage(2)"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about">
-      <div class="container text-center">
-        <h2>Sobre Nós</h2>
-        <p>Conheça nossos produtos e serviços.</p>
-        <img src="images/about.jpg" class="img-fluid" />
-      </div>
-    </section>
-
-    <section id="gallery" class="gallery">
-      <div class="container text-center">
-        <h2>Galeria de Produtos</h2>
-        <div class="gallery-grid">
-          <img
-            src="images/bottle.png"
-            class="gallery-item"
-            onclick="openModal(0)"
-          />
-          <img
-            src="images/pirate-bottle.png"
-            class="gallery-item"
-            onclick="openModal(1)"
-          />
-          <img
-            src="images/boat-bottle.jpg"
-            class="gallery-item"
-            onclick="openModal(2)"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-      <div class="container text-center">
-        <h2>O que dizem nossos clientes</h2>
-        <div class="testimonial-container">
-          <div class="testimonial-slider">
-            <div class="testimonial">"Ótimo serviço!"</div>
-            <div class="testimonial">"Muito confiável!"</div>
-            <div class="testimonial">"Recomendo!"</div>
-          </div>
-        </div>
-        <div class="testimonial-buttons">
-          <button id="prev-testimonial">Anterior</button>
-          <button id="next-testimonial">Próximo</button>
-        </div>
-        <div class="testimonial-dots"></div>
-      </div>
-    </section>
-
-    <section id="countdown" class="countdown">
-      <div class="container text-center">
-        <h2>Promoção Especial</h2>
-        <div id="timer">00:05:00</div>
-        <button class="btn btn-primary">Aproveitar Oferta</button>
-      </div>
-    </section>
-
     <section id="lead-form" class="lead-form">
       <div class="container">
         <h2>Cadastre-se</h2>
@@ -119,11 +28,106 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container text-center">
-        <p>© 2025 Daniel's company</p>
-      </div>
-    </footer>
+    <div id="content">
+      <header id="sticky-header" class="sticky-header">
+        <nav
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <h1>Daniel's company</h1>
+        </nav>
+      </header>
+      <section id="product-page" class="product-page hidden">
+        <div class="container">
+          <h2 id="welcome-message"></h2>
+          <p>Aqui estão os detalhes do nosso produto incrível!</p>
+        </div>
+      </section>
+      <section id="hero" class="hero">
+        <div class="carousel-container">
+          <img
+            id="banner"
+            src="images/blue-banner.jpg"
+            alt="Banner"
+            class="banner-img"
+          />
+          <div class="thumbnails">
+            <img
+              src="images/blue-banner.jpg"
+              class="thumb"
+              onclick="changeImage(0)"
+            />
+            <img
+              src="images/red-banner.jpg"
+              class="thumb"
+              onclick="changeImage(1)"
+            />
+            <img
+              src="images/green-banner.avif"
+              class="thumb"
+              onclick="changeImage(2)"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container text-center">
+          <h2>Sobre Nós</h2>
+          <p>Conheça nossos produtos e serviços.</p>
+          <img src="images/about.jpg" class="img-fluid" />
+        </div>
+      </section>
+      <section id="gallery" class="gallery">
+        <div class="container text-center">
+          <h2>Galeria de Produtos</h2>
+          <div class="gallery-grid">
+            <img
+              src="images/bottle.png"
+              class="gallery-item"
+              onclick="openModal(0)"
+            />
+            <img
+              src="images/pirate-bottle.png"
+              class="gallery-item"
+              onclick="openModal(1)"
+            />
+            <img
+              src="images/boat-bottle.jpg"
+              class="gallery-item"
+              onclick="openModal(2)"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="testimonials">
+        <div class="container text-center">
+          <h2>O que dizem nossos clientes</h2>
+          <div class="testimonial-container">
+            <div class="testimonial-slider">
+              <div class="testimonial">"Ótimo serviço!"</div>
+              <div class="testimonial">"Muito confiável!"</div>
+              <div class="testimonial">"Recomendo!"</div>
+            </div>
+          </div>
+          <div class="testimonial-buttons">
+            <button id="prev-testimonial">Anterior</button>
+            <button id="next-testimonial">Próximo</button>
+          </div>
+          <div class="testimonial-dots"></div>
+        </div>
+      </section>
+      <section id="countdown" class="countdown">
+        <div class="container text-center">
+          <h2>Promoção Especial</h2>
+          <div id="timer">00:05:00</div>
+          <button class="btn btn-primary">Aproveitar Oferta</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container text-center">
+          <p>© 2025 Daniel's company</p>
+        </div>
+      </footer>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/gallery.js"></script>
