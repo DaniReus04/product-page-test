@@ -44,3 +44,62 @@ body {
     width: 100px;
     cursor: pointer;
 }
+
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.testimonial {
+    flex: 0 0 100%;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    margin: 10px;
+    padding-right: 68.5%;
+}
+
+.testimonial-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.testimonial-buttons button {
+    margin: 0 10px;
+    padding: 5px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.testimonial-buttons button:hover {
+    background: #0056b3;
+}
+
+.testimonial-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
