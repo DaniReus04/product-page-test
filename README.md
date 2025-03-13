@@ -15,3 +15,13 @@ The test was conducted on a product page template designed to enhance user exper
 ### Visual Studio Code Extensions
 
 - Prettier 🎨
+
+## Page Speed ⚡
+
+- Desktop 🖥️
+
+![Desktop test speed](images/desktop-test-speed.png)
+
+- Mobile 📱
+
+![Mobile test speed](images/mobile-test-speed.png)
