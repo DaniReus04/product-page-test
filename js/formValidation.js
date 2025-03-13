@@ -51,9 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
     productPage.style.justifyContent = "center";
     productPage.style.alignItems = "center";
 
-    userName = name; // Save user name
-    headerName.textContent = `${userName}'s store`; // Change header name
-    welcomeMessage.textContent = `Olá ${userName}, seja bem-vindo!`;
+    userName = name
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase())
+      .join("");
+
+    headerName.textContent = `${userName} client`;
+    window.alert(`Olá ${name}, seja bem-vindo!`);
 
     document.body.classList.add("show-header");
     document.body.style.overflow = "auto";
