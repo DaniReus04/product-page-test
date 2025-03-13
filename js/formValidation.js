@@ -1,12 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
   const form = document.getElementById("form");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const phoneInput = document.getElementById("phone");
   const leadForm = document.getElementById("lead-form");
-  const productPage = document.getElementById("product-page");
   const headerName = document.querySelector(".header-name");
-  const welcomeMessage = document.getElementById("welcome-message");
 
   let userName = "";
 
@@ -46,10 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    leadForm.style.display = "none";
-    productPage.style.display = "flex";
-    productPage.style.justifyContent = "center";
-    productPage.style.alignItems = "center";
+    leadForm.classList.add("hidden");
 
     userName = name
       .split(" ")
@@ -59,7 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
     headerName.textContent = `${userName} client`;
     window.alert(`Olá ${name}, seja bem-vindo!`);
 
-    document.body.classList.add("show-header");
+    document.querySelector(".content").classList.remove("hidden");
+    document.querySelector(".footer").classList.remove("hidden");
     document.body.style.overflow = "auto";
   });
-});
+})();
