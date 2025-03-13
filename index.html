@@ -28,24 +28,19 @@
       </div>
     </section>
 
-    <div id="content" class="content">
-      <header>
-        <div class="header-name">Meu Site</div>
-        <nav>
-          <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#gallery">Galeria</a></li>
-            <li><a href="#testimonials">Avaliações</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <section id="product-page" class="product-page hidden">
-        <div class="container">
-          <h2 id="welcome-message"></h2>
-          <p>Aqui estão os detalhes do nosso produto incrível!</p>
+    <div id="content" class="content hidden">
+      <header class="show-header">
+        <div>
+          <div class="header-name">Meu Site</div>
+          <nav>
+            <ul>
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#gallery">Galeria</a></li>
+              <li><a href="#testimonials">Avaliações</a></li>
+            </ul>
+          </nav>
         </div>
-      </section>
+      </header>
 
       <section id="hero" class="hero">
         <div class="hero-description">
@@ -57,29 +52,31 @@
             connected world.
           </p>
         </div>
-        <div class="carousel-container">
-          <img
-            id="banner"
-            src="images/blue-banner.jpg"
-            alt="Banner"
-            class="banner-img"
-          />
-          <div class="thumbnails">
+        <div class="carousel-wrapper">
+          <div class="carousel-container">
             <img
+              id="banner"
               src="images/blue-banner.jpg"
-              class="thumb"
-              onclick="changeImage(0)"
+              alt="Banner"
+              class="banner-img"
             />
-            <img
-              src="images/red-banner.jpg"
-              class="thumb"
-              onclick="changeImage(1)"
-            />
-            <img
-              src="images/green-banner.avif"
-              class="thumb"
-              onclick="changeImage(2)"
-            />
+            <div class="thumbnails">
+              <img
+                src="images/blue-banner.jpg"
+                class="thumb"
+                onclick="changeImage(0)"
+              />
+              <img
+                src="images/red-banner.jpg"
+                class="thumb"
+                onclick="changeImage(1)"
+              />
+              <img
+                src="images/green-banner.avif"
+                class="thumb"
+                onclick="changeImage(2)"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -224,7 +221,7 @@
       </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer hidden">
       <div class="container text-center">
         <div class="footer-links">
           <a href="#">Política de Privacidade</a>
