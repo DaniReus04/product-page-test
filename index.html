@@ -35,7 +35,7 @@
           <ul>
             <li><a href="#about">Sobre</a></li>
             <li><a href="#gallery">Galeria</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#testimonials">Avaliações</a></li>
           </ul>
         </nav>
       </header>
@@ -51,15 +51,10 @@
         <div class="hero-description">
           <h2 class="hero-title">Daniel's company</h2>
           <p class="hero-paragraph">
-            Thinking about ways to redefine the future? So are we. We believe
-            that innovation is the key to unlocking new possibilities and
-            shaping a better tomorrow. Our products are designed with
-            cutting-edge technology and forward-thinking concepts, crafted to
-            meet the challenges of tomorrow, today. Whether it's enhancing
-            efficiency, sustainability, or creativity, we're here to provide
-            solutions that not only solve problems but also pave the way for a
-            smarter, more connected world. Explore the future with us and
-            discover what’s next.
+            Redefining the future starts with innovation. Our cutting-edge
+            products tackle tomorrow’s challenges today, enhancing efficiency,
+            sustainability, and creativity. Join us in shaping a smarter, more
+            connected world.
           </p>
         </div>
         <div class="carousel-container">
@@ -90,26 +85,19 @@
       </section>
 
       <section id="about" class="about">
-        <div class="about-img-wrapper">
-          <img src="images/rocket.jpg" class="about-img" />
-        </div>
         <div class="about-description">
           <h2 class="about-title">About us</h2>
           <p class="about-text">
-            At Daniel's company, we are driven by a passion for innovation and
-            excellence. Our mission is to deliver high-quality, forward-thinking
-            solutions that not only meet but exceed the expectations of our
-            customers. Founded with the vision of creating products that combine
-            practicality with cutting-edge technology, we strive to make a
-            lasting impact on the world. We believe in a future where creativity
-            and sustainability go hand-in-hand, and we are committed to
-            providing products that improve everyday life while fostering a
-            better, more sustainable planet. With a dedicated team of experts,
-            we are always exploring new ways to push the boundaries of what’s
-            possible. Join us on our journey to shape the future with smarter,
-            more sustainable solutions, and experience the difference that
-            innovation can make.
+            At Daniel's Company, we innovate with passion and excellence. Our
+            mission is to create high-quality, forward-thinking solutions that
+            exceed expectations. We combine practicality with cutting-edge
+            technology to make a lasting impact. Committed to sustainability and
+            creativity, we design products that enhance everyday life. Join us
+            in shaping a smarter, more sustainable future.
           </p>
+        </div>
+        <div class="about-img-wrapper">
+          <img src="images/rocket.jpg" class="about-img" />
         </div>
       </section>
 
@@ -117,21 +105,9 @@
         <div class="gallery-container">
           <h2>Galeria de Produtos</h2>
           <div class="gallery-grid">
-            <img
-              src="images/bottle.png"
-              class="gallery-item"
-              onclick="openModal(0)"
-            />
-            <img
-              src="images/boat-bottle.jpg"
-              class="gallery-item"
-              onclick="openModal(2)"
-            />
-            <img
-              src="images/pirate-bottle.png"
-              class="gallery-item"
-              onclick="openModal(1)"
-            />
+            <img src="images/bottle.png" class="gallery-item" />
+            <img src="images/boat-bottle.jpg" class="gallery-item" />
+            <img src="images/pirate-bottle.png" class="gallery-item" />
           </div>
         </div>
       </section>
@@ -212,16 +188,54 @@
       </section>
       <section id="countdown" class="countdown">
         <div class="countdown-container">
-          <h2>Promoção Especial</h2>
+          <h2>
+            🔥 Oferta Relâmpago: Desconto Exclusivo por Tempo Limitado! 🔥
+          </h2>
+          <h3>
+            Aproveite nossa promoção especial e garanta 30% de desconto em todos
+            os produtos da loja! Mas corra, essa oferta é válida apenas pelos
+            próximos minutos.
+          </h3>
+          <div>
+            <p>💥 <b>Desconto automático no checkout</b></p>
+            <p>🚀 <b>Frete grátis para pedidos acima de R$ 199,00</b></p>
+            <p>🎁 <b>Brinde exclusivo para os 10 primeiros compradores</b></p>
+          </div>
+          <p>
+            <b>
+              O tempo está passando! Clique no botão abaixo e aproveite agora
+              mesmo. ⏳
+            </b>
+          </p>
           <div id="timer" class="countdown-timer">00:05:00</div>
           <button class="countdown-button">Aproveitar Oferta</button>
         </div>
       </section>
     </div>
 
+    <div id="image-modal" class="image-modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Modal Image" />
+        <div class="modal-controls">
+          <button onclick="changeImageInModal(-1)">&#10094;</button>
+          <button onclick="changeImageInModal(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container text-center">
-        <p>© 2025 Daniel's company</p>
+        <div class="footer-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Serviço</a>
+          <a href="#">Contato</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Linkedin</a>
+        </div>
+        <p>© 2025 Daniel's Company</p>
       </div>
     </footer>
 

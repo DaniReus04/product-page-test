@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slider.style.transform = `translateX(-${index * 90}%)`;
     } else {
       // Para desktop, pode continuar com o comportamento anterior
-      slider.style.transform = `translateX(-${index * 100}%)`;
+      slider.style.transform = `translateX(-${index * 100.5}%)`;
     }
     dots.forEach((dot) => dot.classList.remove("active"));
     dots[index].classList.add("active");
